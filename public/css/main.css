@@ -118,3 +118,40 @@ span {
    filter: grayscale(0);
   }
 }
+
+@media (max-width: 1450px) {
+  h1 {
+    font-size: 70px;
+  }
+  .countdown ul.counter li {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 60px;
+  }
+  .countdown ul.counter li {
+    font-size: 100px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    left: 0;
+    margin-left: 0;
+    position: relative;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 40px;
+  }
+  .countdown ul.counter li {
+    font-size: 60px;
+  }
+  img {
+    top: 100px;
+  }
+}
