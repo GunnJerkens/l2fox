@@ -36,6 +36,7 @@
     var days    = this.remain.days + ":",
         hours   = this.remain.hours + ":", 
         minutes = this.remain.minutes + ":";
+        seconds = this.remain.seconds;
 
     if(this.remain.days < 10) {
       days = "0" + days;
@@ -49,10 +50,14 @@
       minutes = "0" + minutes;
     }
 
+    if(this.remain.seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
     $('#days').text(days);
     $('#hours').text(hours);
     $('#minutes').text(minutes);
-    $('#seconds').text(this.remain.seconds);
+    $('#seconds').text(seconds);
   };
 
   function loadApp() {
