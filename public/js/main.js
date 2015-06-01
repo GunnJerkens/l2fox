@@ -2,7 +2,7 @@
 
   function Countdown() {
     this.today  = new Date();
-    this.geddon = new Date(this.today.getFullYear(), 05, 08);
+    this.geddon = new Date(this.today.getFullYear(), 05, 08, 9, 0, 0);
     this.remain = {
       days: null,
       hours: null,
