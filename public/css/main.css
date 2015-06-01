@@ -1,8 +1,113 @@
-.countdown ul {
+body {
+  background-color: black;
+}
+
+.countdown {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.countdown ul.counter {
   display: inline-block;
   list-style: none;
+  text-align: center;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
 }
-.countdown ul li {
+.countdown ul.counter li {
   float: left;
   padding: 2px;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 200px;
+  margin-left: 20px;
+  list-style: none;
+  background: -webkit-linear-gradient(#fff1dd, #f5b252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px 1px 8px #f5b252, 1px -1px 8px #f5b252;
+}
+
+.countdown ul.placeholder {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 1;
+  margin: 0 auto;
+  top: 0;
+  left: auto;
+  right: auto;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.countdown ul.placeholder li {
+  float: left;
+  padding: 2px;
+  font-family: 'Share Tech Mono', sans-serif;
+  font-size: 200px;
+  margin-left: 20px;
+  background: -webkit-linear-gradient(#fff1dd, #f5b252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px 1px 8px #f5b252, 1px -1px 8px #f5b252;
+  list-style: none;
+}
+
+h1 {
+  animation-name: zoomIn;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  text-align: center;
+  opacity: 0;
+  background: -webkit-linear-gradient(#fff, #f5b252);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: -1px 1px 8px #fff1dd, 1px -1px 8px #f5b252;
+  font-size: 70px;
+  font-family: 'Share Tech Mono', sans-serif;
+  margin-top: 100px;
+}
+
+
+@keyframes zoomIn {
+  0%   {
+    -ms-transform: scale(0, 0); /* IE 9 */
+    -webkit-transform: scale(0, 0); /* Safari */
+    transform: scale(0, 0);
+    opacity: 0;
+  }
+  25% {
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  75% {
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    -ms-transform: scale(1, 1); /* IE 9 */
+    -webkit-transform: scale(1, 1); /* Safari */
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -33,10 +33,10 @@
   };
 
   Countdown.prototype.updateDisplay = function() {
-    $('#days').text(this.remain.days + " days ");
-    $('#hours').text(this.remain.hours + " hours ");
-    $('#minutes').text(this.remain.minutes + " minutes ");
-    $('#seconds').text(this.remain.seconds + " seconds.");
+    $('#days').text("0" + this.remain.days + ":");
+    $('#hours').text("0" + this.remain.hours + ":");
+    $('#minutes').text("0" + this.remain.minutes + ":");
+    $('#seconds').text(this.remain.seconds);
   };
 
   function loadApp() {
