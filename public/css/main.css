@@ -34,31 +34,6 @@ body {
   text-shadow: -1px 1px 8px #f5b252, 1px -1px 8px #f5b252;
 }
 
-.countdown ul.placeholder {
-  position: absolute;
-  opacity: 0.5;
-  z-index: 1;
-  margin: 0 auto;
-  top: 0;
-  left: auto;
-  right: auto;
-  -webkit-transform: translateX(50%);
-  transform: translateX(50%);
-}
-
-.countdown ul.placeholder li {
-  float: left;
-  padding: 2px;
-  font-family: 'Share Tech Mono', sans-serif;
-  font-size: 200px;
-  margin-left: 20px;
-  background: -webkit-linear-gradient(#fff1dd, #f5b252);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: -1px 1px 8px #f5b252, 1px -1px 8px #f5b252;
-  list-style: none;
-}
-
 h1 {
   animation-name: zoomIn;
   animation-duration: 3s;
@@ -66,15 +41,36 @@ h1 {
   animation-fill-mode: forwards;
   text-align: center;
   opacity: 0;
-  background: -webkit-linear-gradient(#fff, #f5b252);
+  background: -webkit-linear-gradient(#c60001, #c60001);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: -1px 1px 8px #fff1dd, 1px -1px 8px #f5b252;
+  text-shadow: -1px 1px 8px #c60001, 1px -1px 8px #c60001;
   font-size: 70px;
   font-family: 'Share Tech Mono', sans-serif;
   margin-top: 100px;
 }
 
+img {
+  animation-name: changeColor;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: forwards;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  position: absolute;
+  z-index: 2;
+  width: 700px;
+  height: 165px;
+  top: 300px;
+  left: 50%;
+  margin-left: -350px;
+}
+
+span {
+  position: absolute;
+  z-index: 3;
+}
 
 @keyframes zoomIn {
   0%   {
@@ -109,5 +105,16 @@ h1 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes changeColor {
+  0%   {
+   -webkit-filter: grayscale(1);
+   filter: grayscale(1);
+  }
+  100% {
+    -webkit-filter: grayscale(0);
+   filter: grayscale(0);
   }
 }
