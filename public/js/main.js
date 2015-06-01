@@ -33,9 +33,25 @@
   };
 
   Countdown.prototype.updateDisplay = function() {
-    $('#days').text("0" + this.remain.days + ":");
-    $('#hours').text("0" + this.remain.hours + ":");
-    $('#minutes').text("0" + this.remain.minutes + ":");
+    var days    = this.remain.days + ":",
+        hours   = this.remain.hours + ":", 
+        minutes = this.remain.minutes + ":";
+
+    if(this.remain.days < 10) {
+      days = "0" + days;
+    }
+
+    if(this.remain.hours < 10) {
+      hours = "0" + hours;
+    }
+
+    if(this.remain.minutes < 10) {
+      minutes = "0" + minutes;
+    }
+
+    $('#days').text(days);
+    $('#hours').text(hours);
+    $('#minutes').text(minutes);
     $('#seconds').text(this.remain.seconds);
   };
 
