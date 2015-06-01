@@ -1,0 +1,8 @@
+.countdown ul {
+  display: inline-block;
+  list-style: none;
+}
+.countdown ul li {
+  float: left;
+  padding: 2px;
+}
