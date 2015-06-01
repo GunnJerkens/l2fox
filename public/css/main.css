@@ -12,10 +12,13 @@ body {
   display: inline-block;
   list-style: none;
   text-align: center;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   opacity: 0;
   position: relative;
@@ -35,9 +38,11 @@ body {
 }
 
 h1 {
+  -webkit-animation-name: zoomIn;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-name: zoomIn;
   animation-duration: 3s;
-  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   text-align: center;
   opacity: 0;
@@ -51,10 +56,13 @@ h1 {
 }
 
 img {
+  -webkit-animation-name: changeColor;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-name: changeColor;
   animation-duration: 3s;
   animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
   animation-fill-mode: forwards;
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
@@ -67,43 +75,68 @@ img {
   margin-left: -350px;
 }
 
-span {
-  position: absolute;
-  z-index: 3;
+p {
+  color: white;
+  font-family: 'Share Tech Mono', sans-serif;
+  text-align: center;
 }
 
 @keyframes zoomIn {
   0%   {
-    -ms-transform: scale(0, 0); /* IE 9 */
-    -webkit-transform: scale(0, 0); /* Safari */
     transform: scale(0, 0);
     opacity: 0;
   }
   25% {
-    -ms-transform: scale(1, 1); /* IE 9 */
-    -webkit-transform: scale(1, 1); /* Safari */
     transform: scale(1, 1);
     opacity: 1;
   }
   75% {
-    -ms-transform: scale(1, 1); /* IE 9 */
-    -webkit-transform: scale(1, 1); /* Safari */
     transform: scale(1, 1);
     opacity: 1;
   }
   100% {
-    -ms-transform: scale(1, 1); /* IE 9 */
-    -webkit-transform: scale(1, 1); /* Safari */
     transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0%   {
+    -webkit-transform: scale(0, 0); /* Safari */
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: scale(1, 1); /* Safari */
+    opacity: 1;
+  }
+  75% {
+    -webkit-transform: scale(1, 1); /* Safari */
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1, 1); /* Safari */
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0%   {
+    -webkit-opacity: 0;
     opacity: 0;
   }
   100% {
+    -webkit-opacity: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0%   {
+    -webkit-opacity: 0;
+    opacity: 0;
+  }
+  100% {
+    -webkit-opacity: 0;
     opacity: 1;
   }
 }
@@ -114,7 +147,18 @@ span {
    filter: grayscale(1);
   }
   100% {
-    -webkit-filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+   filter: grayscale(0);
+  }
+}
+
+@-webkit-keyframes changeColor {
+  0%   {
+   -webkit-filter: grayscale(1);
+   filter: grayscale(1);
+  }
+  100% {
+  -webkit-filter: grayscale(0);
    filter: grayscale(0);
   }
 }
