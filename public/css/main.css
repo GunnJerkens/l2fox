@@ -56,14 +56,6 @@ h1 {
 }
 
 img {
-  /*-webkit-animation-name: changeColor;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: changeColor;
-  animation-duration: 3s;
-  animation-delay: 2s;
-  animation-fill-mode: forwards; */
   -webkit-animation-name: logoZoomIn;
   -webkit-animation-duration: 30s;
   animation-name: logoZoomIn;
@@ -91,17 +83,10 @@ p {
   5%   {
     transform: scale(0.50);
     opacity: 0;
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
   }
   10%  {
     transform: scale(0.50);
     opacity: 1;
-  }
-  14%  {
-    transform: scale(0.50);
-    -webkit-filter: blur(0);
-    filter: blur(0);
   }
   100% {
     transform: scale(1);
@@ -116,17 +101,10 @@ p {
   5%   {
     -webkit-transform: scale(0.50);
     opacity: 0;
-    -webkit-filter: blur(10px);
-    filter: blur(10px);
   }
   10%  {
     -webkit-transform: scale(0.50);
     opacity: 1;
-  }
-  14%  {
-    -webkit-transform: scale(0.50);
-    -webkit-filter: blur(0);
-    filter: blur(0);
   }
   100% {
     -webkit-transform: scale(1);
